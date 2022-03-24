@@ -83,3 +83,6 @@ python pornbot.py
 发送 /start 到机器人
 
 得到回复  `********`
+
+![image](https://user-images.githubusercontent.com/48782751/159890884-d65a2528-e7fc-4be3-a981-fa7608072467.png)
+
