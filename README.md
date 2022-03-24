@@ -84,7 +84,8 @@ python pornbot.py
 
 得到回复  `********`
 
-2.
+2. 
 
-![image](https://user-images.githubusercontent.com/48782751/159890884-d65a2528-e7fc-4be3-a981-fa7608072467.png)
+
+ ![image](https://user-images.githubusercontent.com/48782751/159890884-d65a2528-e7fc-4be3-a981-fa7608072467.png)
 
