@@ -48,6 +48,26 @@ async def send_welcome(event):
     await event.client.send_message(event.chat_id, '向我发送91视频链接，获取视频,有问题请留言 @bzhzq')
 
 
+@bot.on(events.NewMessage(pattern='/get91home'))
+async def send_welcome(event):
+    await event.client.send_message(event.chat_id, '免翻地址: ' + await page91.get91Home())
+
+
+@bot.on(events.NewMessage(pattern='/help'))
+async def send_welcome(event):
+    await event.client.send_message(event.chat_id, '''常见问题:
+         1.如何设置用户名?
+
+           点击头像设置.
+
+         2.我发送的链接后,没收到视频
+
+           部分高清视频刚发布后还在转码，大概在视频发布时间一小时后再尝试发送链接下载.  
+
+''')
+
+
+
 @bot.on(events.NewMessage)
 async def echo_all(event):
     text = event.text

@@ -111,7 +111,13 @@ async def getHs(url):
         imgs = re.findall(r'property="og:image" content="(.*?)"', text)
         videoinfo = VideoInfo()
         videoinfo.title = titles[0]
-        videoinfo.author =unquote(authors[0])
+        videoinfo.author = unquote(authors[0])
         videoinfo.realM3u8 = urls[0]
-        videoinfo.imgUrl=imgs[0]
+        videoinfo.imgUrl = imgs[0]
         return videoinfo
+
+
+async def get91Home():
+    async with aiohttp.ClientSession() as session:
+        async with session.get('https://www.ebay.com/usr/91home') as r:
+            return re.findall(r'<h2 class="bio inline_value">\s\s\s\s(.*?)\s\s', await r.text())[0]
